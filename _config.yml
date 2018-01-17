@@ -1,0 +1,159 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 左手写代码，右手写诗
+subtitle: 我不介意孤独久一点，我只是不想变得微不足道
+description: 
+author: DouDo
+language: default
+timezone: 
+keywords: "后端，java，spring-boot，js，javascript，开发者，程序员，程序猿，编程，代码，开源，Developer,programmer"
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://www.regularmisu.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+#此处为防止readme.md被渲染成readme.html文件
+skip_render: README.md 
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 15
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Archives o
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-yelee
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: http://github.com/writebyheart/writebyheart.github.io.git
+  branch: master 
+  
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+
+      
+# hexo-filter-plugin (https://github.com/Jamling/hexo-filter-highlight) config  
+## highlight in frontend, the plugin (backend) just do some prepare work. 
+## you need to read the docs on https://github.com/Jamling/hexo-filter-highlight to getting start 
+##hljs:
+##  enable: true #true to enable the plugin 
+##  line_number: frontend # add line_number in frontend or backend 
+##  trim_indent: backend # trim the indent of code block to prettify output. backend or front-end (recommend) 
+##  copy_code: false # show copy code in caption. 
+##  label:
+##    left: Code
+##    right: ':'
+##    copy: Copy Code
+
+archive_generator:
+  per_page: 0
+  yearly: true
+  monthly: true
+  
+tag_generator:
+  per_page: 0
+
+disqus_shortname: 
+
+search:
+  path: search.xml
+  field: post
+
+# https://github.com/unhealthy/hexo-all-minifier
+html_minifier:
+  enable: false
+  exclude: 
+
+css_minifier:
+  enable: false
+  exclude: 
+
+js_minifier:
+  enable: false
+  mangle: true
+
+image_minifier:
+  enable: false
+  interlaced: true
+  multipass: true
+  optimizationLevel: 2
+  pngquant: false
+  progressive: true
